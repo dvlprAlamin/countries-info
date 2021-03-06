@@ -1,0 +1,103 @@
+.title {
+  text-align: center;
+  font-size: 3rem;
+  color: #008891;
+}
+.countries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.countries a {
+  text-decoration: none;
+}
+.country img {
+  max-width: 100%;
+  height: 10rem;
+}
+.country-info {
+  width: 80%;
+  margin: 1rem auto;
+}
+.country-info .img {
+  text-align: center;
+}
+.country-info img {
+  max-height: 350px;
+}
+.country-info,
+td,
+th {
+  border: 1px solid #008891;
+  border-collapse: collapse;
+}
+.country-info td,
+th {
+  padding: 0.5rem 1rem;
+}
+.country-info th {
+  width: 40%;
+  font-size: 20px;
+  color: #008891;
+  text-align: left;
+}
+.country-info td {
+  font-size: 20px;
+  color: #0f3057;
+}
+
+.country {
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  perspective: 1000px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-country {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.single-country img {
+  margin-top: 1rem;
+}
+
+.country:hover .single-country {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: linear-gradient(90deg, #7868e6, #897cdd, #7868e6);
+}
+.single-country h1 {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.single-country h3 {
+  color: #dbdbdb;
+}
+.back {
+  background: linear-gradient(90deg, #025955, #00917c, #025955);
+  color: white;
+  transform: rotateY(180deg);
+}

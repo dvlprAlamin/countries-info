@@ -1,0 +1,25 @@
+.list-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.list-container a{
+    text-decoration: none;
+}
+.single-item{
+    width: 70%;
+    min-height: 80px;
+    /* background: linear-gradient(#234345,#554367); */
+    background: linear-gradient(#11698e,#19456b);
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+.single-item:hover{
+    transform: translateX(10px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+    transition: .5s;
+}
